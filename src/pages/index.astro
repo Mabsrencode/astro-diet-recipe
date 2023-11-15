@@ -1,0 +1,33 @@
+---
+const url = 'https://edamam-recipe-search.p.rapidapi.com/api/recipes/v2?type=public&co2EmissionsClass=A%2B&field%5B0%5D=uri&beta=true&random=true&cuisineType%5B0%5D=American&imageSize%5B0%5D=LARGE&mealType%5B0%5D=Breakfast&health%5B0%5D=alcohol-cocktail&diet%5B0%5D=balanced&dishType%5B0%5D=Biscuits%20and%20cookies';
+const options = {
+	method: 'GET',
+	headers: {
+		'Accept-Language': 'en',
+		'X-RapidAPI-Key': 'f8c30fb194mshbd6656c59861836p10230ejsn0db9c6d5cb04',
+		'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.json();
+	console.log(result)
+} catch (error) {
+	console.error(error);
+}
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		
+		<h1>Astro</h1>
+	</body>
+</html>
