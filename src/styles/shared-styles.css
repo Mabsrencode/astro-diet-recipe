@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Roboto&display=swap");
+:root {
+  --blk-color: #272829;
+  --primary-font: "Agbalumo", sans-serif;
+  --secondary-font: "Bebas Neue", sans-serif;
+  --paragraph-font: "Roboto", sans-serif;
+  --primary-clr: #f05941;
+  --secondary-clr: #7d7c7c;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  list-style: none;
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+}
+p,
+a {
+  font-family: var(--paragraph-font);
+}

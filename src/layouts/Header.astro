@@ -1,0 +1,152 @@
+---
+import '../styles/shared-styles.css'
+---
+<style>
+    .container {
+        position: relative;
+  width: 300px;
+  height: 50px;
+}
+.container .search {
+  position: absolute;
+  margin: auto;
+ 
+  right: 0;
+  
+  width: 50px;
+  height: 50px;
+  background: var(--primary-clr);
+  border-radius: 50%;
+  transition: all 0.5s;
+  z-index: 4;
+}
+.container .search:hover {
+  cursor: pointer;
+}
+.container .search::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 16px;
+  right: 0;
+  bottom: 0;
+  left: 14px;
+  width: 12px;
+  height: 2px;
+  background: white;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.container .search::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+.container input {
+  font-family: "Inconsolata", monospace;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background: var(--primary-clr);
+  color: white;
+  padding: 0 80px 0 20px;
+  border-radius: 30px;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 5;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+}
+.container input:hover {
+  cursor: pointer;
+}
+.container input:focus {
+  width: 200px;
+  opacity: 1;
+  cursor: text;
+}
+.container input:focus ~ .search {
+  right: -10px;
+  background: #151515;
+  z-index: 6;
+}
+.container input:focus ~ .search::before {
+  top: 0;
+  left: 0;
+  width: 25px;
+}
+.container input:focus ~ .search::after {
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border: none;
+  background: white;
+  border-radius: 0%;
+  transform: rotate(-45deg);
+}
+.container input::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: bolder;
+}
+.subnav{
+    display: flex;
+    align-items: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-bottom: 10px;
+  background-color: black;
+}
+
+</style>
+<header>
+    <nav>
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <div class="logo"><h1>RecipeCo</h1></div>
+        <div class="subnav">
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+            <div class="container">
+                <input type="text" placeholder="Search...">
+                <div class="search"></div>
+            </div>
+        </div>
+    </nav>
+</header>
