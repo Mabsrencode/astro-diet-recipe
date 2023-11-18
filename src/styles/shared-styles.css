@@ -3,7 +3,7 @@
   --blk-color: #272829;
   --primary-font: "Agbalumo", sans-serif;
   --secondary-font: "Bebas Neue", sans-serif;
-  --paragraph-font: "Roboto", sans-serif;
+  --default-font: "Roboto", sans-serif;
   --primary-clr: #f05941;
   --secondary-clr: #7d7c7c;
   --box-shadow-1: rgba(0, 0, 0, 0.4);
@@ -27,7 +27,7 @@ h6 {
 }
 p,
 a {
-  font-family: var(--paragraph-font);
+  font-family: var(--default-font);
 }
 main {
   z-index: 1;

@@ -33,3 +33,9 @@
   background-color: #555;
   color: white;
 }
+.hero-image h1 span {
+  font-family: var(--default-font);
+}
+.hero-image h1 span {
+  color: var(--primary-clr);
+}
