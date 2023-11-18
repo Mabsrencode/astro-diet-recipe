@@ -1,6 +1,62 @@
-<aside>
+---
+import '../styles/shared-styles.css'
+---
+<style>
+    aside{
+        z-index: 2;
+        height: 100%;
+        width: 400px;
+        position: fixed;
+        top: 0;
+        left: -400px;
+        background-color: var(--primary-clr);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    aside nav{
+        display: grid;
+        justify-content: center;
+    }
+    nav .logo{
+        margin-bottom: 3rem;
+        font-size: 24px;
+    }
+    aside ul a {
+    padding-block: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    }
+    aside ul a:hover {
+    color: #f1f1f1;
+    }
+
+    aside ul #closeBtn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #f1f1f1;
+    cursor: pointer;
+    }
+    @media screen and (max-width: 450px) {
+  aside {
+width: 300px;
+}
+  aside ul a {font-size: 18px;}
+}
+</style>
+<aside id="aside">
     <nav>
+        <div class="logo"><h1>RecipeCo</h1></div>
+        
         <ul>
+            <i class="fa-sharp fa-solid fa-xmark" id="closeBtn"></i>
             <li><a href="/">Home</a></li>
             <li><a href="/category">Category</a></li>
             <li><a href="/about">About</a></li>
@@ -8,3 +64,9 @@
         </ul>
     </nav>
 </aside>
+<script>
+function closeNav() {
+  document.getElementById("aside").style.left = "-400px";
+}
+document.getElementById("closeBtn").addEventListener("click", closeNav);
+</script>

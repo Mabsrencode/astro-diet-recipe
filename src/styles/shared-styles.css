@@ -6,6 +6,7 @@
   --paragraph-font: "Roboto", sans-serif;
   --primary-clr: #f05941;
   --secondary-clr: #7d7c7c;
+  --box-shadow-1: rgba(0, 0, 0, 0.4);
 }
 *,
 *::before,
@@ -27,4 +28,7 @@ h6 {
 p,
 a {
   font-family: var(--paragraph-font);
+}
+main {
+  z-index: 1;
 }
