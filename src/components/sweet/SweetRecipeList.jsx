@@ -38,7 +38,7 @@ const SweetRecipeList = () => {
                         <img src={recipe.image} alt={recipe.title} />
                         <h1>{recipe.title}</h1>
                         <p>{recipe.difficulty}</p>
-                        <a href={Link + recipe.id}>Read</a>
+                        {/* <a href={Link + recipe.id}>Read</a> */}
                     </div>
                 ))}
             </ul>
