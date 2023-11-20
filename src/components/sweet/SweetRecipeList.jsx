@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const SweetRecipeList = () => {
+
     const [recipes, setRecipes] = useState([]);
+    const Link = `/cake-recipe/`
     const key = import.meta.env.PUBLIC_RECIPE_API
     useEffect(() => {
         const fetchData = async () => {
@@ -34,7 +37,8 @@ const SweetRecipeList = () => {
                     <div key={recipe.id}>
                         <img src={recipe.image} alt={recipe.title} />
                         <h1>{recipe.title}</h1>
-                        <p>{recipe.description}</p>
+                        <p>{recipe.difficulty}</p>
+                        <a href={Link + recipe.id}>Read</a>
                     </div>
                 ))}
             </ul>

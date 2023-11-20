@@ -1,8 +1,9 @@
 ---
+import SweetRecipeList from "../components/sweet/SweetRecipeList";
 import Layout from "../layouts/Layout.astro"
 const pageTitle = "Cakes Recipes"
 ---
 
 <Layout pageTitle={pageTitle}>
-    
+    <SweetRecipeList client:visible/>
 </Layout>
