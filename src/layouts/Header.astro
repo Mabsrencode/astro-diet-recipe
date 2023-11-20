@@ -89,6 +89,17 @@ nav{
   font-size: 24px;
   color: var(--primary-clr);
 }
+.subnav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+.subnav ul li a{
+  font-size: 24px;
+  color: var(--primary-clr);
+}
 </style>
 <header>
     <nav>
@@ -97,12 +108,13 @@ nav{
             <span class="line"></span>
             <span class="line"></span>
         </div>
-        <div class="logo"><h1>RecipeCo</h1></div>
+        <a href="/" class="logo"><h1>RecipeCo</h1></a>
         <div class="subnav">
             <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+              <li><p>Follow</p></li>
+                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
             </ul>
             <form class="search-container">
     <input type="text" id="search-bar" placeholder="What can I help you with today?">

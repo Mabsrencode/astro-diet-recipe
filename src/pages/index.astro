@@ -1,7 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 import Layout from "../layouts/Layout.astro"
+import '../styles/shared-styles.css'
 import "../styles/index.css"
+import imageUrl from "../assets/sweet-food-img/banner-cake.jpg"
 const pageTitle = "Home"
 ---
 <style>
@@ -11,10 +13,19 @@ const pageTitle = "Home"
     <main>
         <div class="hero-image">
             <div class="hero-text">
-                <h1><span>SIMPLE RECIPES MADE FOR </span>real, actual, everyday life.</h1>
-                <p>And I'm a Photographer</p>
-                <button>Hire me</button>
+                <h1>SIMPLE RECIPES MADE FOR </h1>
+                <h1>real, actual, everyday life.</h1>
             </div>
         </div>
+        <section>
+            <a href="/cakes-recipe" class="cake-container" title="Why Do So Many Pie Recipes Ask You to Dock the Dough?">
+            <Image src={imageUrl} alt='cake'/>
+            <div class="details-container">
+                <h1>Cake</h1>
+                <h2>Why Do So Many Pie Recipes Ask You to Dock the Dough?</h2>
+                <p>By The Birthday Cake DB</p>
+            </div>
+            </a>
+        </section>
     </main>
 </Layout>

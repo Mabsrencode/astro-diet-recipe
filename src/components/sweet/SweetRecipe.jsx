@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-const SweetRecipe = () => {
+const SweetRecipe = (props) => {
     const [recipe, setRecipes] = useState([]);
     const key = import.meta.env.PUBLIC_RECIPE_API
     useEffect(() => {
         const fetchData = async () => {
-            const url = 'https://the-birthday-cake-db.p.rapidapi.com/1';
+            const url = `https://the-birthday-cake-db.p.rapidapi.com/${props.path}`;
             const options = {
                 method: 'GET',
                 headers: {
